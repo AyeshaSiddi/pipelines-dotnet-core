@@ -13,7 +13,10 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
+- script: 
+    dotnet build --configuration $(buildConfiguration)
+    ls
+    pwd
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: ArchiveFiles@2
